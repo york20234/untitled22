@@ -14,6 +14,7 @@ public class Window extends JFrame {
     private Container cp;
 
     public Window(){
+
         init();
     }
     private  void  init(){
@@ -41,7 +42,7 @@ public class Window extends JFrame {
         move.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Num w=new Num();
+                Num w = new Num(Window.this);
                 w.setVisible(true);
             }
         });
@@ -74,5 +75,9 @@ public class Window extends JFrame {
     public void resetData(){
         jt.setText("");
         jp.setText("");
+    }
+
+    public void setJPF(String str){
+        jp.setText(str);
     }
 }

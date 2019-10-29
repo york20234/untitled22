@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 public class MouseGame extends JInternalFrame {
     private Container cp;
@@ -19,10 +18,11 @@ public class MouseGame extends JInternalFrame {
     private void init() {
         cp = this.getContentPane();
         this.setBounds(5,5,600,400);
-        Icon icon=new ImageIcon("MouseHole.jpg");//第二種方法獲取相應路徑下的圖片檔案
-        back.setIcon(icon);//新增圖片
+        ImageIcon imgMouseHole=new ImageIcon("MouseHole.jpg");
+        back.setIcon(imgMouseHole);
+        Image image = imgMouseHole.getImage();
         cp.add(back);
-        setVisible(true);
+
 
     }
 }
